@@ -12,10 +12,12 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
+  <script id="debug-script" src="https://cdn.jsdelivr.net/gh/MickShannahan/style-debug@latest/debug.min.js"
+    defer></script>
   <title>InstaChick</title>
 </head>
 
-<body>
+<body class="debug">
 
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light px-2">
@@ -57,6 +59,34 @@
 
     </section>
 
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="chickenModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content modal-xl">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div id="detailedChicken" class="modal-body">
+          </div>
+          <!-- <div class="container fluid">
+            <section class="row">
+              <div class="col-4">
+                <h1>${this.title}</h1>
+                <p>${this.description}</p>
+              </div>
+              <div class="col-4">
+                <img src="${this.imgUrl}" alt="${this.title}">
+              </div>
+              <div class="col-4">
+                <div>placeholder for commetns</div>
+              </div>
+            </section>
+          </div> -->
+        </div>
+      </div>
+    </div>
   </main>
 
   <!-- SECTION -->

@@ -4,11 +4,11 @@ import { Pop } from "../utils/Pop.js"
 import { setHTML } from "../utils/Writer.js"
 
 function _paintChickens() {
-    debugger
+
     const chickens = AppState.chickens
     let htmlString = ''
     chickens.forEach(chicken => htmlString += chicken.ChickenCard)
-    console.log(htmlString);
+    // console.log(htmlString);
     setHTML('chickenCards', htmlString)
 
 }
@@ -21,8 +21,10 @@ export class ChickenController {
     }
 
 
-    async getSpecificChicken() {
-        tr
+    async getSpecificChicken(chickenId) {
+        const pulledChicken = AppState.chickens.find(chick => chick.id == chickenId)
+        setHTML('detailedChicken', pulledChicken.ChickenDetails)
+
     }
     async drawChickens() {
         try {
