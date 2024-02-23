@@ -27,11 +27,11 @@ export class Chicken {
           <div class="modal-body">
             <div class="container-fluid detail-picture" style="background-image: url(${this.imgUrl})">
               <section class="row justify-content-between">
-                <div class="col-4 bird-details-card">
+                <div class="col-4 chicken-details-card">
                   <h1>${this.title}</h1>
                   <p>${this.description}</p>
                 </div>
-                <div class="col-4 bird-details-card">
+                <div class="col-4 chicken-details-card">
                   <p>placeholder for commetns</p>
                 </div>
               </section>
