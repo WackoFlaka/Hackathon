@@ -27,3 +27,10 @@ export const PostSchema = new Schema ( {
     toJSON: {virtuals: true}    
 }
 )
+
+PostSchema.virtual('profile', {
+    ref: 'Account',
+    localField: 'creatorId',
+    foreignField: '_id',
+    justOne: true,
+})
