@@ -1,9 +1,37 @@
-<div class="container-fluid bg-white">
-  <div class="row py-3">
-    <div class="col-lg-12">
-      <p class="fs-3 align-items-center">
-        This is the About Page
-      </p>
+<section class="container-fluid">
+    <div class="row pt-5">
+      <div class="col-4">
+        <!-- NOTE here lies the users -->
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://lh3.googleusercontent.com/a/ACg8ocJH-uHFv3PrwKjA4DbSev8tsIUjyNON5K2gySr3hcRH2p4=s96-c" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 d-flex align-items-center">
+              <div class="card-body">
+                <h5 class="card-title">Joaquin Chavez</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-8 chat-container">
+        <div class="chat-messages">
+            <div class="message blue-bg">
+              <div class="message-sender">Joaquin Chavez</div>
+              <div class="message-text">Hey Zach!</div>
+            </div>
+            <div class="message gray-bg">
+              <div class="message-sender">Zachary</div>
+              <div class="message-text">Hey Joaquin!</div>
+            </div>
+        </div>
+        
+        <div class="chat-input-form">
+          <input type="text" class="chat-input" required placeholder="Type Here...">
+          <button type="submit" class="button send-button">Send</button>
+        </div>
+        
+      </div>
     </div>
-  </div>
-</div>
+</section>

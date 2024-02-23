@@ -20,3 +20,87 @@ body {
     padding: 2em;
     font-weight: bolder;
 }
+
+/** LINK  THIS IS THE MESSAGE CSS **/
+
+.chat-container {
+    border-radius: 0.5em;
+    padding: 0.5em 1.25em;
+    margin: auto;
+    max-width: 100%;
+    height: 37.5em;
+    box-shadow: 0 0 1.25em 0.5em black;
+}
+
+.chat-messages {
+    height: 23em;
+    overflow-y: scroll;
+}
+
+.chat-messages::-webkit-scrollbar {
+    display: none;
+}
+
+.message {
+    padding: 0.625em;
+    border-radius: 1em;
+    margin-bottom: 0.625em;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.message-sender {
+    font-weight: bold;
+    margin-bottom: 0.30em;
+}
+
+.message-text {
+    font-size: 1rem;
+    margin-bottom: 0.30em;
+    word-wrap: break-word;
+}
+
+.blue-bg {
+    background-color: #1c9bef;
+}
+
+.gray-bg {
+    background-color: #3d5365;
+}
+
+.chat-input-form {
+    display: flex;
+    align-items: center;
+    margin-top: 2em;
+    gap: 0.625em;
+}
+
+.chat-input {
+    padding: 0.625em;
+    border: none;
+    border-radius: 0.5em;
+    background-color: white;
+    color: #333;
+    font-size: 1em;
+    flex-grow: 1;
+}
+
+.button {
+    border: none;
+    padding: 0.625em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.button:hover {
+    filter: brightness(0.9)
+}
+
+.send-button {
+    background-color: #1c9bef;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 0.625em;
+}

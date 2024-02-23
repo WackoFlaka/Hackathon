@@ -15,7 +15,7 @@ export class ValuesController extends BaseController {
   }
 
   /**
-   * Sends all values back to the client
+   * Sends a single value by its id or error, back to the client
    * @param {import("express").Request} request
    * @param {import("express").Response} response
    * @param {import("express").NextFunction} next
