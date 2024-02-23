@@ -8,7 +8,6 @@ function _paintChickens() {
 export class ChickenController {
 
     constructor() {
-        this.drawChickens()
     }
 
     async drawChickens() {

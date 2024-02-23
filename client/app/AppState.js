@@ -1,3 +1,4 @@
+import { Chicken } from './models/Chicken.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { isValidProp } from './utils/IsValidProp.js'
 
@@ -6,6 +7,12 @@ class ObservableAppState extends EventEmitter {
   /** @type {import('./models/Account.js').Account | null} */
   // @ts-ignore
   account = null
+
+
+  /**
+   * @type {Chicken[]}
+   */
+  posts = []
 
   // Used to load initial data
   init() {
