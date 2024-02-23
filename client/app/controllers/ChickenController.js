@@ -1,5 +1,6 @@
 import { AppState } from "../AppState.js"
 import { chickenService } from "../services/ChickenService.js"
+import { commentsService } from "../services/CommentService.js"
 import { Pop } from "../utils/Pop.js"
 import { setHTML } from "../utils/Writer.js"
 
@@ -20,6 +21,14 @@ export class ChickenController {
         AppState.on('chickens', _paintChickens)
     }
 
+    async getComments(chickenId) {
+        try {
+            const comments = await commentsService.getComments(chickenId)
+        } catch (error) {
+            Pop.error(error)
+            console.log(error);
+        }
+    }
 
     async getSpecificChicken(chickenId) {
         const pulledChicken = AppState.chickens.find(chick => chick.id == chickenId)
