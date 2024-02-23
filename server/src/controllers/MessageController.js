@@ -6,8 +6,19 @@ export class MessageController extends BaseController {
     constructor() {
         super('api/messages')
         this.router
+            .get('', this.getMessages)
             .use(Auth0Provider.getAuthorizedUserInfo)
             .post('', this.createMessage)
+    }
+    
+    
+    async getMessages(request, response, next) {
+        try {
+            const messages = await messageService.getMessages()
+            response.send(messages)
+        } catch (error) {
+            next(error)
+        }
     }
     
     async createMessage(request, response, next) {

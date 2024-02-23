@@ -1,5 +1,6 @@
 import { AccountController } from "./controllers/AccountController.js";
 import { ChickenController } from "./controllers/ChickenController.js";
+import { MessageController } from "./controllers/MessageController.js";
 import { AuthGuard } from "./services/AuthService.js";
 import { Router } from "./utils/Router.js";
 
@@ -12,6 +13,7 @@ export const router = new Router([
   },
   {
     path: '#/about',
+    controllers: [MessageController],
     view: 'app/views/AboutView.html'
   },
   {
