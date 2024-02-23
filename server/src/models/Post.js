@@ -42,3 +42,10 @@ PostSchema.virtual('like', {
     count: true
 })
 
+PostSchema.virtual('comment', {
+    ref: 'Comment',
+    localField: '_id',
+    foreignField: 'postId',
+    justOne: true,
+})
+
