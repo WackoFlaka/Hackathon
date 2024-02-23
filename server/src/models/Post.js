@@ -34,3 +34,11 @@ PostSchema.virtual('profile', {
     foreignField: '_id',
     justOne: true,
 })
+
+PostSchema.virtual('like', {
+    ref: 'Like',
+    localField: '_id',
+    foreignField: 'postId',
+    count: true
+})
+
