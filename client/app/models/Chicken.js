@@ -7,7 +7,7 @@ export class Chicken {
         this.id = data._id || data.id
     }
 
-    get ChickenDetails() {
+    get ChickenCard() {
         return `
         <div class="col-4">
         <div type="button" onclick="app.ChickenController.getSpecificChicken(${this.id})" class="card text-center">

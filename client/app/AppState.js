@@ -12,7 +12,7 @@ class ObservableAppState extends EventEmitter {
   /**
    * @type {Chicken[]}
    */
-  posts = []
+  chickens = []
 
   // Used to load initial data
   init() {
