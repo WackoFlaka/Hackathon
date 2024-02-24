@@ -5,7 +5,7 @@ export class Chicken {
         this.description = data.description
         this.creatorId = data.creatorId
         this.id = data._id || data.id
-        this.profile = data.commentProfile
+        this.profile = data.profile
         this.comment = data.comment
     }
 
@@ -43,7 +43,8 @@ export class Chicken {
         `
     }
     get commentBlock() {
-        return `
+        if (this.id == this.comment.postId) {
+            return `
         <div class="card text-center">
         <img class="card-img-start" src="${this.profile.picture}" alt="Title" />
         <h4 class="card-title">${this.profile.name}</h4>
@@ -52,6 +53,8 @@ export class Chicken {
         </div>
       </div>
         `
+
+        }
     }
 
 }
