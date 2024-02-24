@@ -5,7 +5,7 @@ class PostService {
         const posts = await dbContext.Posts.find()
         .populate('profile', 'name picture')
         .populate('like')
-        .populate('comment', 'name picture')
+        .populate('comment', 'name picture description')
         return posts
     }
     
@@ -13,7 +13,7 @@ class PostService {
         const post = await dbContext.Posts.create(postData)
         await post.populate('profile', 'name picture')
         await post.populate('like')
-        await post.populate('comment', 'name picture')
+        await post.populate('comment', 'name picture description')
         return post
     }
     

@@ -5,7 +5,6 @@ import { PostSchema } from '../models/Post.js';
 import { LikeSchema } from '../models/Likes.js';
 import { CommentSchema } from '../models/Comments.js';
 import { MessageSchema } from '../models/Message.js';
-import { MessageRecipientSchema } from '../models/MessageRecipient.js';
 
 class DbContext {
   Values = mongoose.model('Value', ValueSchema);
@@ -18,8 +17,6 @@ class DbContext {
   Comments = mongoose.model('Comment', CommentSchema)
   
   Messages = mongoose.model('Message', MessageSchema)
-  
-  Recipients = mongoose.model('Recipient', MessageRecipientSchema)
 }
 
 export const dbContext = new DbContext()

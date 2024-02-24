@@ -2,6 +2,10 @@ import { AppState } from "../AppState.js"
 import { messageService } from "../services/MessageService.js"
 import { Pop } from "../utils/Pop.js"
 
+function _drawMessage() {
+    
+}
+
 export class MessageController {
     constructor() {
         console.log("Message Controller is loaded..")

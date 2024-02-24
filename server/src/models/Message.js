@@ -6,6 +6,11 @@ export const MessageSchema = new Schema ({
         required: true,
         ref: 'Account'
     },
+    recipientId: {
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: 'Account'  
+    },
     message_body: {
         type: String,
         required: true,
@@ -23,11 +28,4 @@ MessageSchema.virtual('message_profile', {
     localField: 'creatorId',
     foreignField: '_id',
     justOne: true,
-})
-
-MessageSchema.virtual('recipient', {
-    ref: 'Recipient',
-    localField: '_id',
-    foreignField: 'MessageId',
-    justOne: true
 })

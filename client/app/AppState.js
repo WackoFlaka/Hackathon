@@ -1,4 +1,5 @@
 import { Chicken } from './models/Chicken.js'
+import { Message } from './models/Message.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { isValidProp } from './utils/IsValidProp.js'
 
@@ -15,6 +16,11 @@ class ObservableAppState extends EventEmitter {
   chickens = []
 
   comments = {}
+  
+   /**
+   * @type {Message[]}
+   */
+  messages = []
 
   // Used to load initial data
   init() {
