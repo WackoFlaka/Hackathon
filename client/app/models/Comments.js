@@ -7,7 +7,13 @@ export class Comments {
 
     get commentBlock() {
         return `
-        
+        <div class="card text-center">
+        <img class="card-img-start" src="holder.js/100px180/" alt="Title" />
+        <h4 class="card-title">Name</h4>
+        <div class="card-body">
+          <p class="card-text">Comment</p>
+        </div>
+      </div>
         `
     }
 }

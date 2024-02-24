@@ -5,6 +5,8 @@ export class Chicken {
         this.description = data.description
         this.creatorId = data.creatorId
         this.id = data._id || data.id
+        this.profile = data.commentProfile
+        this.comment = data.comment
     }
 
     get ChickenCard() {
@@ -32,12 +34,23 @@ export class Chicken {
                   <p>${this.description}</p>
                 </div>
                 <div class="col-4 chicken-details-card">
-                  <p>placeholder for commetns</p>
+                  <p>${this.commentBlock}</p>
                 </div>
               </section>
             </div>
           </div>
        
+        `
+    }
+    get commentBlock() {
+        return `
+        <div class="card text-center">
+        <img class="card-img-start" src="${this.profile.picture}" alt="Title" />
+        <h4 class="card-title">${this.profile.name}</h4>
+        <div class="card-body">
+          <p class="card-text">${this.comment.description}</p>
+        </div>
+      </div>
         `
     }
 

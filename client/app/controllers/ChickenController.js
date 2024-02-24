@@ -2,7 +2,7 @@ import { AppState } from "../AppState.js"
 import { chickenService } from "../services/ChickenService.js"
 import { commentsService } from "../services/CommentService.js"
 import { Pop } from "../utils/Pop.js"
-import { setHTML } from "../utils/Writer.js"
+import { setHTML, setText } from "../utils/Writer.js"
 
 function _paintChickens() {
 
@@ -12,6 +12,12 @@ function _paintChickens() {
     // console.log(htmlString);
     setHTML('chickenCards', htmlString)
 
+}
+function _paintComments() {
+    const chickens = AppState.chickens
+    let htmlString = ''
+    const comments = chickens.find(chick => htmlString += chick.commentBlock)
+    setHTML('comments', htmlString)
 }
 
 export class ChickenController {

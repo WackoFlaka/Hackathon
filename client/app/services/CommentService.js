@@ -4,7 +4,6 @@ import { api } from "./AxiosService.js"
 class CommentsService {
     getComments(chickenId) {
         const detailedChicken = AppState.chickens.find(chick => chick.id == chickenId)
-
     }
 }
 

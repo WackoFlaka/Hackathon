@@ -14,6 +14,8 @@ class ObservableAppState extends EventEmitter {
    */
   chickens = []
 
+  comments = {}
+
   // Used to load initial data
   init() {
 
