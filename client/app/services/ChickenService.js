@@ -7,7 +7,7 @@ class ChickenService {
 
         const response = await api.get('api/posts')
         console.log('chickens get', response.data);
-        const newChicken = response.data.map(chicken => new Chicken(chicken))
+        const newChicken = response.data
         AppState.chickens = newChicken
         AppState.emit('chickens')
     }
