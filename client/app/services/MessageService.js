@@ -8,6 +8,7 @@ class MessageService {
         console.log('messages recieved!', response.data)
         const newMessage = response.data.map(message => new Message(message))
         AppState.messages = newMessage
+        console.log('Appstate messages', AppState.messages)
         AppState.emit('messages')
     }
     

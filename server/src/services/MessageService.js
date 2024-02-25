@@ -3,6 +3,7 @@ import { dbContext } from "../db/DbContext.js"
 class MessageService {
     async getMessages() {
         const messages = await dbContext.Messages.find()
+        .populate('message_profile')
         return messages
     }
     async createMessage(messageData) {
